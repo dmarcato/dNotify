@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>dNotify Example</title>
+	<link rel="stylesheet" type="text/css" href="./dNotify.css" media="screen" />
+	<script type="text/javascript" src="./jquery.min.js"></script>
+	<script type="text/javascript" src="./jquery.dNotify.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$.dNotify('good', "Welcome to dNotify test page! :)", {duration: 3000});
+
+		$('button.good').click(function() {
+			$.dNotify('good', "I'm a good notify :) I will go away very soon.");
+		});
+		$('button.bad').click(function() {
+			$.dNotify('bad', "I'm a bad notify :( And i will not go away until you click on me.");
+		});
+		$('button.warn').click(function() {
+			$.dNotify('warn', "I'm a warn notify :/ And like the bad notify, I will not go away until you click on me.");
+		});
+		$('button.warn_nosticky').click(function() {
+			$.dNotify('warn', "I'm a warn notify :/ But I will go away soon because I'm not sticky! :P", {sticky: false});
+		});
+		$('button.all').click(function() {
+			$('button.good,button.bad,button.warn,button.warn_nosticky').click();
+		});
+
+		$('button.close_bad').click(function() {
+			$.dNotify('close', 'bad');
+		});
+		$('button.close_all').click(function() {
+			$.dNotify('closeAll');
+		});
+	});
+	</script>
+</head>
+<body>
+	<button class="good">Show good notify</button><br />
+	<button class="bad">Show bad notify</button><br />
+	<button class="warn">Show warn notify</button><br />
+	<button class="warn_nosticky">Show warn notify not sticky</button><br />
+	<button class="all">Show all notify</button><br /><br />
+
+	<button class="close_bad">Close bad notify</button><br />
+	<button class="close_all">Close all notify</button><br />
+</body>
+</html>

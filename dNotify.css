@@ -1,0 +1,82 @@
+/**************************************************
+*   dNotify - A simple user notification system   *
+*             based on jQuery and CSS             *
+*   https://github.com/dmarcato/dNotify           *
+*                                                 *
+*   Version 1.0 (6 November 2011)                 *
+*                                                 *
+*   Copyright(c) 2011, Dario Marcato              *
+*   Web: http://about.me/dariomarcato             *
+*   Mail: dm0388@gmail.com                        *
+***************************************************/
+#dNotify {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	vertical-align: center;
+}
+
+#dNotify .msg {
+	position: relative;
+	width: 100%;
+	display: none;
+	border-bottom: 1px solid;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	cursor: pointer;
+	
+	box-shadow: 0 1px 5px #333;
+	-moz-box-shadow: 0 1px 5px #333;
+	-webkit-box-shadow: 0 1px 5px #333;
+}
+
+#dNotify .msg img.icon {
+	border: 0;
+	vertical-align: middle;
+	height: 22px;
+}
+
+#dNotify .msg img.icon.left {
+	float: left;
+	margin-left: 15px;
+}
+
+#dNotify .msg img.icon.right {
+	float: right;
+	margin-right: 15px;
+}
+
+#dNotify .msg.good {
+	background-color: #9f9;	/* Fallback for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(221,255,221,0.8)), to(rgba(153,255,153, 0.8)));
+	background: -moz-linear-gradient(top,  rgba(221,255,221,0.8),  rgba(153,255,153, 0.8));
+	color: #3a3;
+	border-color: #3a3;
+}
+
+#dNotify .msg.bad {
+	background-color: #f99;	/* Fallback for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,221,221,0.8)), to(rgba(255,153,153, 0.8)));
+	background: -moz-linear-gradient(top,  rgba(255,221,221,0.8),  rgba(255,153,153, 0.8));
+	color: #a33;
+	border-color: #a33;
+}
+
+#dNotify .msg.warn {
+	background-color: #ff9;	/* Fallback for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,221,0.8)), to(rgba(255,255,153, 0.8)));
+	background: -moz-linear-gradient(top,  rgba(255,255,221,0.8),  rgba(255,255,153, 0.8));
+	color: #aa3;
+	border-color: #aa3;
+}
+
+#dNotify .msg.normal {
+	background-color: #99f;	/* Fallback for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(221,221,255,0.8)), to(rgba(153,153,255, 0.8)));
+	background: -moz-linear-gradient(top,  rgba(221,221,255,0.8),  rgba(153,153,255, 0.8));
+	color: #33a;
+	border-color: #33a;
+}
